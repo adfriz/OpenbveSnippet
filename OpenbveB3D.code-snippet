@@ -246,3 +246,14 @@ Z: The z-direction of the rotational axis. Negative values point backward, posit
     VertexIndex: The vertex index the coordinate is referring to. Allowed values are 0 through n-1, where n is the number of AddVertex commands used.
     X: The x-coordinate of the texture. Integer values correspond to the left/right edge of the texture. If only values between 0 and 1 are to be considered, 0 corresponds to the left and 1 to the right.
     Y: The y-coordinate of the texture. Integer values correspond to the top/bottom edge of the texture. If only values between 0 and 1 are to be considered, 0 corresponds to the top and 1 to the bottom."
+},
+  "Coordinates 4x": {
+    "prefix": "cooo",
+    "body": [
+        "Coordinates, ${1:VertexIndex}, ${2:X}, ${3:Y}",
+        "Coordinates, ${4:VertexIndex}, ${5:X}, ${6:Y}",
+        "Coordinates, ${7:VertexIndex}, ${8:X}, ${9:Y}",
+        "Coordinates, ${10:VertexIndex}, ${11:X}, ${12:Y}$0",
+        ]
+    "description": "insert Coordinates command 4 times, explanation is same as Coordinates command"
+}
