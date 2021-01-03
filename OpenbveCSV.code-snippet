@@ -186,7 +186,7 @@ Z: The z-direction of the rotational axis. Negative values point backward, posit
     r: The ratio that indicates how much to displace vectors."
 },
   "SetColor": {
-    "prefix": "sc",
+    "prefix": "scr",
     "body": "SetColor, ${1:Red}, ${2:Green}, ${3:Blue}, ${4:Alpha}$0",
     "description": "insert SetColor command
     This command sets the color for all faces that were already created in the current CreateMeshBuilder section. If no texture is used, the faces will be colored using the color data as specified by Red, Greenand Blue. If a texture is used, the pixels in the texture will be multiplied by the color, where multiplying with black results in black and multiplying with white does not change the color of the texture pixels. Values in-between make the texture pixels darker. When lighting is used in the route, the actual color can change depending on the lighting conditions, but will usually become darker.
