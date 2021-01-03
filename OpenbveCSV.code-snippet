@@ -47,7 +47,7 @@
 },
   "AddFace2": {
     "prefix": "af2",
-    "body": "AddFace, ${1:v1}, ${2:v2}, ${3:v3}, ${4:v4}$0",
+    "body": "AddFace2, ${1:v1}, ${2:v2}, ${3:v3}, ${4:v4}$0",
     "description": "insert AddFace2 command
     same as AddFace command but The back of the face will also be visible, however, lighting on the back face might be the same as on the front face.
     vi: The vertex index to include in this face. Allowed values are 0 through n-1, where n is the number of AddVertex commands used."
@@ -56,9 +56,9 @@
     "prefix": "af22",
     "body": [
       "AddFace2, ${1:v1}, ${2:v2}, ${3:v3}, ${4:v4}",
-      "AddFace, ${5:v1}, ${6:v2}, ${7:v3}, ${4:v4}",
-      "AddFace, ${8:v1}, ${9:v2}, ${10:v3}, ${4:v4}",
-      "AddFace, ${11:v1}, ${12:v2}, ${13:v3}, ${14:v4}$0"
+      "AddFace2, ${5:v1}, ${6:v2}, ${7:v3}, ${4:v4}",
+      "AddFace2, ${8:v1}, ${9:v2}, ${10:v3}, ${4:v4}",
+      "AddFace2, ${11:v1}, ${12:v2}, ${13:v3}, ${14:v4}$0"
       ],
     "description": "insert AddFace2 command 4 times, explanation is same as AddFace2 command"
 },
