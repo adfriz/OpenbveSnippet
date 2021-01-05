@@ -1,0 +1,249 @@
+{
+  "Include": {
+    "prefix": "inc",
+    "body": "[Include]",
+    "description": "iYou can use the [Include] section to just include other objects, but without animating them. This allows you to use the ANIMATED object file as a container to group other objects. There can be any number of [Include] sections within the file."
+}
+  "Position": {
+    "prefix": "pos",
+    "body": "Position, ${1:X}, ${2:Y}, ${3:Z}$0",
+    "description": "This defines the position of the objects, basically allowing you to offset them with respect to the rest of the ANIMATED object file."
+},
+  "Object": {
+    "prefix": "obj",
+    "body": "[Object]",
+    "description": "You can use the [Object] section to create a single animation. This requires to set up at least one state via the States parameter, and to use any combination of functions you want, which provide control over the animation. There can be any number of [Object] sections within the file."
+},
+  "States": {
+    "prefix": "st",
+    "body": "States = ${1:File}$0",
+    "description": "Loads n objects of CSV/B3D/X extension. Please note that the first file indicated has state index 0. Use multiple files only if you want to use state changes."
+},
+  "StateFunction": {
+    "prefix": "sf",
+    "body": StateFunction = ${1:Formula}$0,
+    "description": "This defines the function for state changes. The result of the Formula is rounded toward the nearest integer. If that integer is between 0 and n-1, where n is the number of states as defined via States, the respective state is shown, otherwise, no object is shown. You can make use of the latter if you want an object to toggle on/off with only one state."
+},
+  "TranslateXDirection": {
+    "prefix": "txd",
+    "body": "TranslateXDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
+    "description": "These define the directions for the TranslateXFunction,This means that TranslateXFunction will move right by default.
+    default direction are TranslateXDirection = 1, 0, 0
+    If you define other directions, then simply think of the three functions and associated directions as three independent ways to move the object in that direction."
+},
+  "TranslateYDirection": {
+    "prefix": "tyd",
+    "body": "TranslateYDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
+    "description": "These define the directions for the TranslateYFunction,This means that TranslateYFunction will move right by default.
+    default direction are TranslateYDirection = 0, 1, 0
+    If you define other directions, then simply think of the three functions and associated directions as three independent ways to move the object in that direction."
+},
+  "TranslateZDirection": {
+    "prefix": "tzd",
+    "body": "TranslateZDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
+    "description": "These define the directions for the TranslateZFunction,This means that TranslateZFunction will move right by default.
+    default direction are TranslateZDirection = 0, 0, 1
+    If you define other directions, then simply think of the three functions and associated directions as three independent ways to move the object in that direction."
+},
+  "TranslateDirectionXYZ": {
+    "prefix": "td",
+    "body": [
+        "TranslateXDirection, ${1:X}, ${2:Y}, ${3:Z}",
+        "TranslateYDirection, ${4:X}, ${5:Y}, ${6:Z}",
+        "TranslateZDirection, ${7:X}, ${8:Y}, ${9:Z}$0",
+        ]
+    "description": "This command insert TranslateXDirection,TranslateYDirection and TranslateZDirection at the same time."
+},
+  "TranslateXFunction": {
+    "prefix": "txf",
+    "body": "TranslateXFunction = ${1:Formula}$0",
+    "description": "These define the functions to move the object into the respective direction. The Formula needs to return the amount of meters to move from the initial position. The X, Y and Z parameters in the respective direction are multiplied by the result of Formula, so you could for example either multiple the formula by 2 or the direction by 2 if you want to double the speed of movement."
+},
+  "TranslateYFunction": {
+    "prefix": "tyf",
+    "body": "TranslateYFunction = ${1:Formula}$0",
+    "description": "These define the functions to move the object into the respective direction. The Formula needs to return the amount of meters to move from the initial position. The X, Y and Z parameters in the respective direction are multiplied by the result of Formula, so you could for example either multiple the formula by 2 or the direction by 2 if you want to double the speed of movement."
+},
+  "TranslateZFunction": {
+    "prefix": "tzf",
+    "body": "TranslateZFunction = ${1:Formula}$0",
+    "description": "These define the functions to move the object into the respective direction. The Formula needs to return the amount of meters to move from the initial position. The X, Y and Z parameters in the respective direction are multiplied by the result of Formula, so you could for example either multiple the formula by 2 or the direction by 2 if you want to double the speed of movement."
+},
+  "TranslateFunctionXYZ": {
+    "prefix": "tf",
+    "body": [
+        "TranslateXFunction = ${1:Formula}",
+        "TranslateYFunction = ${2:Formula}",
+        "TranslateZFunction = ${3:Formula}$0",
+        ]
+    "description": "This command insert TranslateXFunction,TranslateYFunction and TranslateZFunction at the same time."
+},
+  "RotateXDirection": {
+    "prefix": "rxd",
+    "body": "RotateXDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
+    "description": "These define the directions for the RotateXFunction,This means that RotateXFunction will rotate around the x-axis by default.
+    default direction are RotateXDirection = 1, 0, 0
+    If you define other directions, then simply think of the three functions and associated directions as three independent ways to rotate the object in that direction."
+},
+  "RotateYDirection": {
+    "prefix": "ryd",
+    "body": "RotateYDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
+    "description": "These define the directions for the RotateYFunction,This means that RotateYFunction will move around Y-axis.
+    default direction are RotateYDirection = 0, 1, 0
+    If you define other directions, then simply think of the three functions and associated directions as three independent ways to rotate the object in that direction."
+},
+  "RotateZDirection": {
+    "prefix": "rzd",
+    "body": "RotateZDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
+    "description": "These define the directions for the RotateZFunction,This means that RotateZFunction will move around Z-axis.
+    default direction are RotateZDirection = 0, 0, 1
+    If you define other directions, then simply think of the three functions and associated directions as three independent ways to rotate the object in that direction."
+},
+  "RotateDirectionXYZ": {
+    "prefix": "rd",
+    "body": [
+        "RotateXDirection, ${1:X}, ${2:Y}, ${3:Z}",
+        "RotateYDirection, ${4:X}, ${5:Y}, ${6:Z}",
+        "RotateZDirection, ${7:X}, ${8:Y}, ${9:Z}$0",
+        ]
+    "description": "This command insert RotateXDirection,RotateYDirection and RotateZDirection at the same time."
+},
+  "RotateXFunction": {
+    "prefix": "rxf",
+    "body": "RotateXFunction = ${1:Formula}$0",
+    "description": "These define the functions to rotate along the respective direction in counter-clockwise order. The Formula needs to return the angle by which to rotate in radians. The order in which the rotations are performed is: RotateXFunction (first), RotateYFunction (then) and RotateZFunction (last). If you use more than one rotation function at a time, bear this order in mind. If necessary, overwrite the default directions for the rotations if you need a different order."
+},
+  "RotateYFunction": {
+    "prefix": "ryf",
+    "body": "RotateYFunction = ${1:Formula}$0",
+    "description": "These define the functions to rotate along the respective direction in counter-clockwise order. The Formula needs to return the angle by which to rotate in radians. The order in which the rotations are performed is: RotateXFunction (first), RotateYFunction (then) and RotateZFunction (last). If you use more than one rotation function at a time, bear this order in mind. If necessary, overwrite the default directions for the rotations if you need a different order."
+},
+  "RotateZFunction": {
+    "prefix": "rzf",
+    "body": "RotateZFunction = ${1:Formula}$0",
+    "description": "These define the functions to rotate along the respective direction in counter-clockwise order. The Formula needs to return the angle by which to rotate in radians. The order in which the rotations are performed is: RotateXFunction (first), RotateYFunction (then) and RotateZFunction (last). If you use more than one rotation function at a time, bear this order in mind. If necessary, overwrite the default directions for the rotations if you need a different order."
+},
+  "RotateFunctionXYZ": {
+    "prefix": "rf",
+    "body": [
+        "RotateXFunction = ${1:Formula}",
+        "RotateYFunction = ${2:Formula}",
+        "RotateZFunction = ${3:Formula}$0",
+        ]
+    "description": "This command insert RotateXFunction,RotateYFunction and RotateZFunction at the same time."
+},
+  "RotateXDamping": {
+    "prefix": "rxda",
+    "body": "RotateXDamping = ${1:NaturalFrequency}, ${2:DampingRatio}$0",
+    "description": "These define damping for the corresponding functions. If not used, damping will not be performed. NaturalFrequency is a non-negative value corresponding to the angular frequency of an assumed undamped oscillator in radians per second. DampingRatio is a non-negative value indicating the type of damping. Values between 0 and 1 represent under-damping, 1 represents critical damping, and values above 1 represent over-damping."
+},
+  "RotateYDamping": {
+    "prefix": "ryda",
+    "body": "RotateYDamping = ${1:NaturalFrequency}, ${2:DampingRatio}$0",
+    "description": "These define damping for the corresponding functions. If not used, damping will not be performed. NaturalFrequency is a non-negative value corresponding to the angular frequency of an assumed undamped oscillator in radians per second. DampingRatio is a non-negative value indicating the type of damping. Values between 0 and 1 represent under-damping, 1 represents critical damping, and values above 1 represent over-damping."
+},
+  "RotateZDamping": {
+    "prefix": "rzda",
+    "body": "RotateZDamping = ${1:NaturalFrequency}, ${2:DampingRatio}$0",
+    "description": "These define damping for the corresponding functions. If not used, damping will not be performed. NaturalFrequency is a non-negative value corresponding to the angular frequency of an assumed undamped oscillator in radians per second. DampingRatio is a non-negative value indicating the type of damping. Values between 0 and 1 represent under-damping, 1 represents critical damping, and values above 1 represent over-damping."
+},
+  "RotateDampingXYZ": {
+    "prefix": "rda",
+    "body": [
+        "RotateXDamping = ${1:NaturalFrequency}, ${2:DampingRatio}",
+        "RotateYDamping = ${3:NaturalFrequency}, ${4:DampingRatio}$0",
+        "RotateZDamping = ${5:NaturalFrequency}, ${6:DampingRatio}$0",
+        ]
+    "description": "This command insert RotateXDamping,RotateYDamping and RotateZDamping at the same time."
+},
+  "TextureShiftXDirection": {
+    "prefix": "tsxd",
+    "body": "TextureShiftXDirection = ${1:X}, ${2:Y}$0",
+    "description": "These define the directions for the TextureShiftXFunction The default directions are: TextureShiftXDirection = 1, 0 This means that TextureShiftXFunction will shift the texture right by default, and If you define other directions, then simply think of the two functions and associated directions as two independent ways to shift textures on the objects."
+},
+  "TextureShiftYDirection": {
+    "prefix": "tsyd",
+    "body": "TextureShiftyDirection = ${1:X}, ${2:Y}$0",
+    "description": "These define the directions for the TextureShiftYFunction The default directions are: TextureShiftYDirection = 0, 1 This means that TextureShiftYFunction will shift the texture down by default, and If you define other directions, then simply think of the two functions and associated directions as two independent ways to shift textures on the objects."
+},
+  "TextureShiftXFunction": {
+    "prefix": "tsxf",
+    "body": "TextureShiftXFunction = ${1:Formula}$0",
+    "description": "These define the functions to shift the texture in the respective direction. The texture is shifted by the return value of Formula in texture coordinates. The integer part of the result is ignored, and a fractional part of 0.5 represents moving the texture half way. The SetTextureCoordinate commands in the object file define the coordinates, which are then added the outcome of these formulas."
+},
+  "TextureShiftYFunction": {
+    "prefix": "tsyf",
+    "body": "TextureShiftYFunction = ${1:Formula}$0",
+    "description": "These define the functions to shift the texture in the respective direction. The texture is shifted by the return value of Formula in texture coordinates. The integer part of the result is ignored, and a fractional part of 0.5 represents moving the texture half way. The SetTextureCoordinate commands in the object file define the coordinates, which are then added the outcome of these formulas."
+},
+  "TrackFollowerFunction": {
+    "prefix": "tff",
+    "body": "TextureFollowerFunction = ${1:Formula}$0",
+    "description": "This defines the function which moves an object and source of the sound along the path of Rail 0. Formula must return a distance in meters, for which the object is then moved, respecting the curves and height changes of Rail 0."
+},
+  "TextureOverride": {
+    "prefix": "tov",
+    "body": "TextureOverride = ${1:Value}$0",
+    "description": "Value = Timetable: All faces will show the timetable bitmap as set up by CSV/RW routes.
+    Value = None: The original textures will be displayed on the faces (default behavior)."
+},
+  "RefreshRate": {
+    "prefix": "rr",
+    "body": "RefreshRate = ${1:Seconds}$0",
+    "description": "This defines the minimum amount of time that needs to pass before the functions are updated. A value of 0 forces the functions to be updated every frame. Please note that objects outside of the visual range might be updated less frequently regardless of this parameter. Use RefreshRate when you don’t need a perfectly smooth animation (in order to optimize performance), or when you deliberately want the object to be only updated in fixed intervals."
+},
+  "Sound": {
+    "prefix": "sou",
+    "body": "[Sound]",
+    "description": "You can use the [Sound] section to add standalone sound effects to animated objects."
+},
+  "FileName": {
+    "prefix": "fn",
+    "body": "FileName = ${1:File}",
+    "description": "This loads either for the sound effect or sound for state changes. Alternatively, FileNames command may be used to Loads a list of multiple sounds, which correspond to the states in the [Object] section above. If a state is to have no sound effect, the list entry should be left blank."
+},
+  "Volume": {
+    "prefix": "vol",
+    "body": "Volume = ${1:Value}",
+    "description": "This defines the volume of the sound at the source position and This also defines the initial volume of the sound at the source position. A value of 1.0 represents the nominal unchanged volume of the sound file."
+},
+  "Pitch": {
+    "prefix": "pit",
+    "body": "Pitch = ${1:Value}",
+    "description": "This defines the pitch of the sound at the source position and also This defines the initial volume of the sound at the source position. A value of 1.0 represents the nominal unchanged pitch of the sound file."
+},
+  "Radius": {
+    "prefix": "rad",
+    "body": "Radius = ${1:Value}",
+    "description": "This defines the radius in meters from it’s source at which the sound effect plays at full volume. The default value is 30."
+},
+  "PlayOnShow": {
+    "prefix": "pons",
+    "body": "PlayOnShow = ${1:Value}",
+    "description": "Value = 0: The sound effect will not be played. Value = 1: The sound effect will be played. This defines whether the sound effect defined above should be played when a the relevant state is shown. ! PlayOnShow and PlayOnHide will be ignored when using multiple state sounds."
+},
+  "PlayOnHide": {
+    "prefix": "ponh",
+    "body": "PlayOnHide = ${1:Value}",
+    "description": "Value = 0: The sound effect will not be played. Value = 1: The sound effect will be played. This defines whether the sound effect defined above should be played when a the relevant state is hidden. ! PlayOnShow and PlayOnHide will be ignored when using multiple state sounds."
+},
+  "VolumeFunction": {
+    "prefix": "vf",
+    "body": "VolumeFunction = ${1:Formula}$0",
+    "description": "This defines the function which controls the volume of the sound. Formula must return a number representing the desired volume, where 1.0 represents the nomimal unchanged volume of the sound file."
+},
+  "PitchFunction": {
+    "prefix": "pf",
+    "body": "PitchFunction = ${1:Formula}$0",
+    "description": "This defines the function which controls the pitch of the sound. Formula must return a number representing the desired pitch, where 1.0 represents the nomimal unchanged pitch of the sound file."
+},
+  "StateChangeSound": {
+    "prefix": "scs",
+    "body": "[StateChangeSound]",
+    "description": "You can use the [StateChangeSound] section to attach sound effects to the preceeding [Object] section. This starts the section- Must immediately follow an [Object] section."
+},
+  "FileNames": {
+    "prefix": "fns",
+    "body": "FileNames = ${1:File}, ${2:File}",
+    "description": "This loads either for the sound effect or sound for state changes. Alternatively, FileNames command may be used to Loads a list of multiple sounds, which correspond to the states in the [Object] section above. If a state is to have no sound effect, the list entry should be left blank."
+}
