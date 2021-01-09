@@ -21,7 +21,7 @@
 },
   "StateFunction": {
     "prefix": "sf",
-    "body": StateFunction = ${1:Formula}$0,
+    "body": "StateFunction = ${1:Formula}$0",
     "description": "This defines the function for state changes. The result of the Formula is rounded toward the nearest integer. If that integer is between 0 and n-1, where n is the number of states as defined via States, the respective state is shown, otherwise, no object is shown. You can make use of the latter if you want an object to toggle on/off with only one state."
 },
   "TranslateXDirection": {
