@@ -1,0 +1,147 @@
+{
+  "Options.UnitOfLength": {
+    "prefix": "opt.len",
+    "body": "Options.UnitOfLength ${1:Value}$0",
+    "description": "Sets the unit of length (e.g., 1 for meters)."
+  },
+  "Options.UnitOfSpeed": {
+    "prefix": "opt.spd",
+    "body": "Options.UnitOfSpeed ${1:Value}$0",
+    "description": "Sets the unit of speed (e.g., 1 for km/h)."
+  },
+  "Options.ObjectVisibility": {
+    "prefix": "opt.vis",
+    "body": "Options.ObjectVisibility ${1:Value}$0",
+    "description": "Sets the object visibility distance in meters."
+  },
+  "Route.Comment": {
+    "prefix": "rou.com",
+    "body": "Route.Comment ${1:Text}$0",
+    "description": "Sets the route description/comment."
+  },
+  "Route.Image": {
+    "prefix": "rou.img",
+    "body": "Route.Image ${1:File}$0",
+    "description": "Sets the preview image for the route."
+  },
+  "Route.Timetable": {
+    "prefix": "rou.tt",
+    "body": "Route.Timetable ${1:File}$0",
+    "description": "Loads a timetable image."
+  },
+  "Route.AmbientLight": {
+    "prefix": "rou.amb",
+    "body": "Route.AmbientLight ${1:Red}, ${2:Green}, ${3:Blue}$0",
+    "description": "Sets the ambient light color (0-255)."
+  },
+  "Route.DirectionalLight": {
+    "prefix": "rou.dir",
+    "body": "Route.DirectionalLight ${1:Red}, ${2:Green}, ${3:Blue}$0",
+    "description": "Sets the directional light color (0-255)."
+  },
+  "Route.LightDirection": {
+    "prefix": "rou.ldir",
+    "body": "Route.LightDirection ${1:Azimuth}, ${2:Elevation}$0",
+    "description": "Sets the light direction angles in degrees."
+  },
+  "Train.Folder": {
+    "prefix": "trn.fld",
+    "body": "Train.Folder ${1:Name}$0",
+    "description": "Sets the default train folder."
+  },
+  "Train.Velocity": {
+    "prefix": "trn.vel",
+    "body": "Train.Velocity ${1:Value}$0",
+    "description": "Sets the initial velocity of the train."
+  },
+  "Structure.Rail.Load": {
+    "prefix": "str.rail",
+    "body": "Structure.Rail(${1:Index}).Load ${2:File}$0",
+    "description": "Loads a rail object."
+  },
+  "Structure.Ground.Load": {
+    "prefix": "str.grnd",
+    "body": "Structure.Ground(${1:Index}).Load ${2:File}$0",
+    "description": "Loads a ground object."
+  },
+  "Structure.FreeObj.Load": {
+    "prefix": "str.free",
+    "body": "Structure.FreeObj(${1:Index}).Load ${2:File}$0",
+    "description": "Loads a free object."
+  },
+  "Structure.Pole.Load": {
+    "prefix": "str.pole",
+    "body": "Structure.Pole(${1:Rails}; ${2:Index}).Load ${3:File}$0",
+    "description": "Loads a pole object (specify number of rails)."
+  },
+  "Track.RailStart": {
+    "prefix": "trk.rail",
+    "body": "${1:Dist}, Track.RailStart ${2:Index}, ${3:X}, ${4:Y}, ${5:RailType}$0",
+    "description": "Starts a new rail with index, offsets, and type."
+  },
+  "Track.RailEnd": {
+    "prefix": "trk.raile",
+    "body": "${1:Dist}, Track.RailEnd ${2:Index}$0",
+    "description": "Ends the specified rail."
+  },
+  "Track.Curve": {
+    "prefix": "trk.cur",
+    "body": "${1:Dist}, Track.Curve ${2:Radius}, ${3:Cant}$0",
+    "description": "Sets horizontal curve and cant."
+  },
+  "Track.Pitch": {
+    "prefix": "trk.pit",
+    "body": "${1:Dist}, Track.Pitch ${2:Gradient}$0",
+    "description": "Sets vertical gradient (1:X or percentage depending on settings)."
+  },
+  "Track.FreeObj": {
+    "prefix": "trk.free",
+    "body": "${1:Dist}, Track.FreeObj ${2:RailIndex}, ${3:ObjectIndex}, ${4:X}, ${5:Y}, ${6:Yaw}, ${7:Pitch}, ${8:Roll}$0",
+    "description": "Places a free object relative to a rail."
+  },
+  "Track.Station": {
+    "prefix": "trk.sta",
+    "body": "${1:Dist}, Track.Station ${2:Name}, ${3:ArrivalTime}, ${4:DepartureTime}, ${5:Doors}, ${6:ForcedStop}, ${7:SafetySystem}, ${8:ArrivalSound}, ${9:DepartureSound}, ${10:TimetableIndex}$0",
+    "description": "Defines a station stop."
+  },
+  "Track.Stop": {
+    "prefix": "trk.stop",
+    "body": "${1:Dist}, Track.Stop ${2:Direction}, ${3:BackwardTolerance}, ${4:ForwardTolerance}$0",
+    "description": "Defines a stop position markers."
+  },
+  "Track.Signal": {
+    "prefix": "trk.sig",
+    "body": "${1:Dist}, Track.Signal ${2:RailIndex}, ${3:SectionIndex}, ${4:X}, ${5:Y}$0",
+    "description": "Places a signal."
+  },
+  "Track.Limit": {
+    "prefix": "trk.lim",
+    "body": "${1:Dist}, Track.Limit ${2:Speed}, ${3:Direction}, ${4:CeeThrough}$0",
+    "description": "Sets a speed limit."
+  },
+  "Track.Beacon": {
+    "prefix": "trk.beac",
+    "body": "${1:Dist}, Track.Beacon ${2:Type}, ${3:Data}, ${4:RailIndex}, ${5:X}, ${6:Y}$0",
+    "description": "Places a safety system beacon."
+  },
+  "Track.Brightness": {
+    "prefix": "trk.bri",
+    "body": "${1:Dist}, Track.Brightness ${2:Value}$0",
+    "description": "Sets the track brightness (0-255)."
+  },
+  "Track.Fog": {
+    "prefix": "trk.fog",
+    "body": "${1:Dist}, Track.Fog ${2:Start}, ${3:End}, ${4:Red}, ${5:Green}, ${6:Blue}$0",
+    "description": "Sets fog conditions."
+  },
+  "Track.Announce": {
+    "prefix": "trk.ann",
+    "body": "${1:Dist}, Track.Announce ${2:File}$0",
+    "description": "Plays an announcement sound."
+  },
+  "Track.Buffer": {
+    "prefix": "trk.buf",
+    "body": "${1:Dist}, Track.Buffer ${2:Direction}$0",
+    "description": "Places a track buffer (end of rail)."
+  }
+}
