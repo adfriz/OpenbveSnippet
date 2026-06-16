@@ -2,66 +2,66 @@
   "Include": {
     "prefix": "inc",
     "body": "[Include]",
-    "description": "You can use the [Include] section to just include other objects, but without animating them. This allows you to use the ANIMATED object file as a container to group other objects. There can be any number of [Include] sections within the file."
+    "description": "Starts the [Include] section to include other objects without animating them."
   },
   "Position": {
     "prefix": "pos",
-    "body": "Position, ${1:X}, ${2:Y}, ${3:Z}$0",
-    "description": "This defines the position of the objects, basically allowing you to offset them with respect to the rest of the ANIMATED object file."
+    "body": "Position = ${1:X}, ${2:Y}, ${3:Z}$0",
+    "description": "Defines the position of the objects/sound, offsetting them relative to the animated file."
   },
   "Object": {
     "prefix": "obj",
     "body": "[Object]",
-    "description": "You can use the [Object] section to create a single animation. This requires to set up at least one state via the States parameter, and to use any combination of functions you want, which provide control over the animation. There can be any number of [Object] sections within the file."
+    "description": "Starts the [Object] section to create a single animation."
   },
   "States": {
     "prefix": "st",
-    "body": "States = ${1:File1}, ${2:File2}$0",
-    "description": "Loads n objects of CSV/B3D/X extension. Please note that the first file indicated has state index 0. Use multiple files only if you want to use state changes."
+    "body": "States = ${1:File0}, ${2:File1}$0",
+    "description": "Loads n objects (CSV/B3D/X). First file has state index 0."
   },
   "StateFunction": {
     "prefix": "sf",
     "body": "StateFunction = ${1:Formula}$0",
-    "description": "This defines the function for state changes. The result of the Formula is rounded toward the nearest integer. If that integer is between 0 and n-1, where n is the number of states as defined via States, the respective state is shown, otherwise, no object is shown. You can make use of the latter if you want an object to toggle on/off with only one state."
+    "description": "Defines the function for state changes. Result is rounded to nearest integer."
   },
   "TranslateXDirection": {
     "prefix": "txd",
-    "body": "TranslateXDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
-    "description": "These define the directions for the TranslateXFunction. Default direction is 1, 0, 0."
+    "body": "TranslateXDirection = ${1:X}, ${2:Y}, ${3:Z}$0",
+    "description": "Direction for TranslateXFunction. Default is 1, 0, 0."
   },
   "TranslateYDirection": {
     "prefix": "tyd",
-    "body": "TranslateYDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
-    "description": "These define the directions for the TranslateYFunction. Default direction is 0, 1, 0."
+    "body": "TranslateYDirection = ${1:X}, ${2:Y}, ${3:Z}$0",
+    "description": "Direction for TranslateYFunction. Default is 0, 1, 0."
   },
   "TranslateZDirection": {
     "prefix": "tzd",
-    "body": "TranslateZDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
-    "description": "These define the directions for the TranslateZFunction. Default direction is 0, 0, 1."
+    "body": "TranslateZDirection = ${1:X}, ${2:Y}, ${3:Z}$0",
+    "description": "Direction for TranslateZFunction. Default is 0, 0, 1."
   },
   "TranslateDirectionXYZ": {
     "prefix": "td",
     "body": [
-      "TranslateXDirection, ${1:X}, ${2:Y}, ${3:Z}",
-      "TranslateYDirection, ${4:X}, ${5:Y}, ${6:Z}",
-      "TranslateZDirection, ${7:X}, ${8:Y}, ${9:Z}$0"
+      "TranslateXDirection = ${1:X}, ${2:Y}, ${3:Z}",
+      "TranslateYDirection = ${4:X}, ${5:Y}, ${6:Z}",
+      "TranslateZDirection = ${7:X}, ${8:Y}, ${9:Z}$0"
     ],
     "description": "Inserts TranslateXDirection, TranslateYDirection and TranslateZDirection at once."
   },
   "TranslateXFunction": {
     "prefix": "txf",
     "body": "TranslateXFunction = ${1:Formula}$0",
-    "description": "Defines functions to move object. Returns amount in meters."
+    "description": "Moves object along X direction. Returns amount in meters."
   },
   "TranslateYFunction": {
     "prefix": "tyf",
     "body": "TranslateYFunction = ${1:Formula}$0",
-    "description": "Defines functions to move object. Returns amount in meters."
+    "description": "Moves object along Y direction. Returns amount in meters."
   },
   "TranslateZFunction": {
     "prefix": "tzf",
     "body": "TranslateZFunction = ${1:Formula}$0",
-    "description": "Defines functions to move object. Returns amount in meters."
+    "description": "Moves object along Z direction. Returns amount in meters."
   },
   "TranslateFunctionXYZ": {
     "prefix": "tf",
@@ -74,42 +74,42 @@
   },
   "RotateXDirection": {
     "prefix": "rxd",
-    "body": "RotateXDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
+    "body": "RotateXDirection = ${1:X}, ${2:Y}, ${3:Z}$0",
     "description": "Rotational axis for RotateXFunction. Default is 1, 0, 0."
   },
   "RotateYDirection": {
     "prefix": "ryd",
-    "body": "RotateYDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
+    "body": "RotateYDirection = ${1:X}, ${2:Y}, ${3:Z}$0",
     "description": "Rotational axis for RotateYFunction. Default is 0, 1, 0."
   },
   "RotateZDirection": {
     "prefix": "rzd",
-    "body": "RotateZDirection, ${1:X}, ${2:Y}, ${3:Z}$0",
+    "body": "RotateZDirection = ${1:X}, ${2:Y}, ${3:Z}$0",
     "description": "Rotational axis for RotateZFunction. Default is 0, 0, 1."
   },
   "RotateDirectionXYZ": {
     "prefix": "rd",
     "body": [
-      "RotateXDirection, ${1:X}, ${2:Y}, ${3:Z}",
-      "RotateYDirection, ${4:X}, ${5:Y}, ${6:Z}",
-      "RotateZDirection, ${7:X}, ${8:Y}, ${9:Z}$0"
+      "RotateXDirection = ${1:X}, ${2:Y}, ${3:Z}",
+      "RotateYDirection = ${4:X}, ${5:Y}, ${6:Z}",
+      "RotateZDirection = ${7:X}, ${8:Y}, ${9:Z}$0"
     ],
     "description": "Inserts all RotateDirection commands at once."
   },
   "RotateXFunction": {
     "prefix": "rxf",
     "body": "RotateXFunction = ${1:Formula}$0",
-    "description": "Rotation in radians (counter-clockwise). Order: X, then Y, then Z."
+    "description": "Rotation around X axis in radians (counter-clockwise)."
   },
   "RotateYFunction": {
     "prefix": "ryf",
     "body": "RotateYFunction = ${1:Formula}$0",
-    "description": "Rotation in radians (counter-clockwise). Order: X, then Y, then Z."
+    "description": "Rotation around Y axis in radians (counter-clockwise)."
   },
   "RotateZFunction": {
     "prefix": "rzf",
     "body": "RotateZFunction = ${1:Formula}$0",
-    "description": "Rotation in radians (counter-clockwise). Order: X, then Y, then Z."
+    "description": "Rotation around Z axis in radians (counter-clockwise)."
   },
   "RotateFunctionXYZ": {
     "prefix": "rf",
@@ -123,17 +123,17 @@
   "RotateXDamping": {
     "prefix": "rxda",
     "body": "RotateXDamping = ${1:NaturalFrequency}, ${2:DampingRatio}$0",
-    "description": "Non-negative Frequency (rad/s) and Damping Ratio (0-1 under, 1 critical, >1 over)."
+    "description": "Damping for RotateXFunction. Freq (rad/s), Ratio (0-1 under, 1 critical, >1 over)."
   },
   "RotateYDamping": {
     "prefix": "ryda",
     "body": "RotateYDamping = ${1:NaturalFrequency}, ${2:DampingRatio}$0",
-    "description": "Non-negative Frequency (rad/s) and Damping Ratio (0-1 under, 1 critical, >1 over)."
+    "description": "Damping for RotateYFunction. Freq (rad/s), Ratio (0-1 under, 1 critical, >1 over)."
   },
   "RotateZDamping": {
     "prefix": "rzda",
     "body": "RotateZDamping = ${1:NaturalFrequency}, ${2:DampingRatio}$0",
-    "description": "Non-negative Frequency (rad/s) and Damping Ratio (0-1 under, 1 critical, >1 over)."
+    "description": "Damping for RotateZFunction. Freq (rad/s), Ratio (0-1 under, 1 critical, >1 over)."
   },
   "RotateDampingXYZ": {
     "prefix": "rda",
@@ -144,30 +144,54 @@
     ],
     "description": "Inserts all RotateDamping commands at once."
   },
+  "ScaleXFunction": {
+    "prefix": "sxf",
+    "body": "ScaleXFunction = ${1:Formula}$0",
+    "description": "Scales object along X axis. 1.0 is nominal size."
+  },
+  "ScaleYFunction": {
+    "prefix": "syf",
+    "body": "ScaleYFunction = ${1:Formula}$0",
+    "description": "Scales object along Y axis. 1.0 is nominal size."
+  },
+  "ScaleZFunction": {
+    "prefix": "szf",
+    "body": "ScaleZFunction = ${1:Formula}$0",
+    "description": "Scales object along Z axis. 1.0 is nominal size."
+  },
+  "ScaleFunctionXYZ": {
+    "prefix": "scf",
+    "body": [
+      "ScaleXFunction = ${1:Formula}",
+      "ScaleYFunction = ${2:Formula}",
+      "ScaleZFunction = ${3:Formula}$0"
+    ],
+    "description": "Inserts all ScaleFunction commands at once."
+  },
   "TextureShiftXDirection": {
     "prefix": "tsxd",
     "body": "TextureShiftXDirection = ${1:X}, ${2:Y}$0",
-    "description": "Texture shift direction. Default X is 1, 0."
+    "description": "Texture shift direction for X. Default is 1, 0."
   },
   "TextureShiftYDirection": {
     "prefix": "tsyd",
     "body": "TextureShiftYDirection = ${1:X}, ${2:Y}$0",
-    "description": "Texture shift direction. Default Y is 0, 1."
+    "description": "Texture shift direction for Y. Default is 0, 1."
   },
   "TextureShiftXFunction": {
     "prefix": "tsxf",
     "body": "TextureShiftXFunction = ${1:Formula}$0",
-    "description": "Shift in texture coordinates. Fractional part used."
+    "description": "Shift in texture coordinates X. Fractional part is used."
   },
   "TextureShiftYFunction": {
     "prefix": "tsyf",
     "body": "TextureShiftYFunction = ${1:Formula}$0",
-    "description": "Shift in texture coordinates. Fractional part used."
+    "description": "Shift in texture coordinates Y. Fractional part is used."
   },
   "TrackFollowerFunction": {
     "prefix": "tff",
     "body": "TrackFollowerFunction = ${1:Formula}$0",
-    "description": "Moves object along Rail 0 path. Formula returns meters."
+    "description": "Moves object/sound along Rail 0 path. Formula returns meters."
   },
   "TextureOverride": {
     "prefix": "tov",
@@ -177,71 +201,71 @@
   "RefreshRate": {
     "prefix": "rr",
     "body": "RefreshRate = ${1:Seconds}$0",
-    "description": "Minimum update interval. 0 = every frame."
+    "description": "Minimum update interval in seconds. 0 = every frame."
   },
   "ExtractTextureXFunction": {
     "prefix": "etxf",
     "body": "ExtractTextureXFunction = ${1:Formula}$0",
-    "description": "Scales texture on the X-axis based on formula result."
+    "description": "Extracts/scales texture on the X-axis based on formula result."
   },
   "ExtractTextureYFunction": {
     "prefix": "etyf",
     "body": "ExtractTextureYFunction = ${1:Formula}$0",
-    "description": "Scales texture on the Y-axis based on formula result."
+    "description": "Extracts/scales texture on the Y-axis based on formula result."
   },
   "Sound": {
     "prefix": "sou",
     "body": "[Sound]",
-    "description": "Standalone sound effect section."
+    "description": "Starts the [Sound] section for standalone sound effects."
   },
   "FileName": {
     "prefix": "fn",
-    "body": "FileName = ${1:File}",
+    "body": "FileName = ${1:File}$0",
     "description": "Sound file to load."
   },
   "Volume": {
     "prefix": "vol",
-    "body": "Volume = ${1:Value}",
-    "description": "Sound volume. 1.0 is default."
+    "body": "Volume = ${1:Value}$0",
+    "description": "Sound volume. 1.0 is nominal unchanged volume."
   },
   "Pitch": {
     "prefix": "pit",
-    "body": "Pitch = ${1:Value}",
-    "description": "Sound pitch. 1.0 is default."
+    "body": "Pitch = ${1:Value}$0",
+    "description": "Sound pitch. 1.0 is nominal unchanged pitch."
   },
   "Radius": {
     "prefix": "rad",
-    "body": "Radius = ${1:Value}",
+    "body": "Radius = ${1:Value}$0",
     "description": "Radius in meters for full volume. Default 30."
   },
   "PlayOnShow": {
     "prefix": "pons",
-    "body": "PlayOnShow = ${1|0,1|}",
-    "description": "1 = play sound when state shown."
+    "body": "PlayOnShow = ${1|0,1|}$0",
+    "description": "1 = play sound when state is shown."
   },
   "PlayOnHide": {
     "prefix": "ponh",
-    "body": "PlayOnHide = ${1|0,1|}",
-    "description": "1 = play sound when state hidden."
+    "body": "PlayOnHide = ${1|0,1|}$0",
+    "description": "1 = play sound when state is hidden."
   },
   "VolumeFunction": {
     "prefix": "vf",
     "body": "VolumeFunction = ${1:Formula}$0",
-    "description": "Formula for dynamic volume control."
+    "description": "Formula for dynamic volume control. 1.0 is nominal."
   },
   "PitchFunction": {
     "prefix": "pf",
     "body": "PitchFunction = ${1:Formula}$0",
-    "description": "Formula for dynamic pitch control."
+    "description": "Formula for dynamic pitch control. 1.0 is nominal."
   },
   "StateChangeSound": {
     "prefix": "scs",
     "body": "[StateChangeSound]",
-    "description": "Attach sounds to preceding [Object]. Must follow [Object] directly."
+    "description": "Starts [StateChangeSound] section. Must immediately follow an [Object] section."
   },
   "FileNames": {
     "prefix": "fns",
-    "body": "FileNames = ${1:File}, ${2:File}",
-    "description": "List of sounds corresponding to states."
+    "body": "FileNames = ${1:File0}, ${2:File1}$0",
+    "description": "List of sounds corresponding to states in the preceding [Object]."
   }
 }

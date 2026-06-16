@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotepadPlus>
+    <AutoComplete language="user">
+        <Environment ignoreCase="yes" startFunc="," stopFunc="" paramSeparator="," terminal="" additionalWordChar="_." />
+        
+        <KeyWord name="[MeshBuilder]" func="yes">
+            <Overload retVal="Start a new section of faces." />
+        </KeyWord>
+        <KeyWord name="Vertex" func="yes">
+            <Overload retVal="Create a vertex with spatial and normal coordinates.">
+                <Param name="vX" /><Param name="vY" /><Param name="vZ" />
+                <Param name="nX" /><Param name="nY" /><Param name="nZ" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Face" func="yes">
+            <Overload retVal="Create a face from vertex indices (clockwise order).">
+                <Param name="v1" /><Param name="v2" /><Param name="v3" /><Param name="v4" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Face2" func="yes">
+            <Overload retVal="Create a double-sided face.">
+                <Param name="v1" /><Param name="v2" /><Param name="v3" /><Param name="v4" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Cube" func="yes">
+            <Overload retVal="Create a centered cube.">
+                <Param name="HalfWidth" /><Param name="HalfHeight" /><Param name="HalfDepth" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Cylinder" func="yes">
+            <Overload retVal="Create a frustum/prism.">
+                <Param name="n" /><Param name="UpperRadius" /><Param name="LowerRadius" /><Param name="Height" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Translate" func="yes">
+            <Overload retVal="Translate vertices created so far in current section.">
+                <Param name="X" /><Param name="Y" /><Param name="Z" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="TranslateAll" func="yes">
+            <Overload retVal="Translate all vertices in the file.">
+                <Param name="X" /><Param name="Y" /><Param name="Z" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Scale" func="yes">
+            <Overload retVal="Scale vertices created so far in current section.">
+                <Param name="X" /><Param name="Y" /><Param name="Z" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ScaleAll" func="yes">
+            <Overload retVal="Scale all vertices in the file.">
+                <Param name="X" /><Param name="Y" /><Param name="Z" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Rotate" func="yes">
+            <Overload retVal="Rotate vertices around axis by Angle degrees.">
+                <Param name="X" /><Param name="Y" /><Param name="Z" /><Param name="Angle" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="RotateAll" func="yes">
+            <Overload retVal="Rotate all vertices in the file around axis by Angle degrees.">
+                <Param name="X" /><Param name="Y" /><Param name="Z" /><Param name="Angle" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Mirror" func="yes">
+            <Overload retVal="Mirror vertices (1=true, 0=false).">
+                <Param name="X" /><Param name="Y" /><Param name="Z" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="MirrorAll" func="yes">
+            <Overload retVal="Mirror all vertices in the file (1=true, 0=false).">
+                <Param name="X" /><Param name="Y" /><Param name="Z" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Shear" func="yes">
+            <Overload retVal="Perform shear mapping on current section vertices.">
+                <Param name="dX" /><Param name="dY" /><Param name="dZ" />
+                <Param name="sX" /><Param name="sY" /><Param name="sZ" /><Param name="r" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ShearAll" func="yes">
+            <Overload retVal="Shear all vertices in the file.">
+                <Param name="dX" /><Param name="dY" /><Param name="dZ" />
+                <Param name="sX" /><Param name="sY" /><Param name="sZ" /><Param name="r" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Color" func="yes">
+            <Overload retVal="Set color for faces in current section (0-255).">
+                <Param name="Red" /><Param name="Green" /><Param name="Blue" /><Param name="Alpha" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ColorAll" func="yes">
+            <Overload retVal="Set color for ALL faces in object.">
+                <Param name="Red" /><Param name="Green" /><Param name="Blue" /><Param name="Alpha" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="EmissiveColor" func="yes">
+            <Overload retVal="Set emissive color for current section.">
+                <Param name="Red" /><Param name="Green" /><Param name="Blue" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="EmissiveColorAll" func="yes">
+            <Overload retVal="Set emissive color for ALL faces in object.">
+                <Param name="Red" /><Param name="Green" /><Param name="Blue" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="BlendMode" func="yes">
+            <Overload retVal="Set blend mode and glow attenuation.">
+                <Param name="Mode (Normal/Additive)" /><Param name="GlowHalfDistance" /><Param name="Exponent (2/4)" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="WrapMode" func="yes">
+            <Overload retVal="Texture tiling behavior.">
+                <Param name="Mode (Repeat/Clamp)" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Load" func="yes">
+            <Overload retVal="Load texture for current section.">
+                <Param name="DaytimeTexture" /><Param name="NighttimeTexture" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Transparent" func="yes">
+            <Overload retVal="Screendoor transparency color key.">
+                <Param name="Red" /><Param name="Green" /><Param name="Blue" />
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Coordinates" func="yes">
+            <Overload retVal="Associate texture coordinates (0-1) to vertex index.">
+                <Param name="VertexIndex" /><Param name="X" /><Param name="Y" />
+            </Overload>
+        </KeyWord>
+    </AutoComplete>
+</NotepadPlus>

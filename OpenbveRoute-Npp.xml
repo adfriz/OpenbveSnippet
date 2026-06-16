@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotepadPlus>
+	<AutoComplete language="CSV">
+		<Environment ignoreCase="yes" startFunc=" " stopFunc="" paramSeparator=";" terminal="" additionalWordChar="_." />
+		<!-- Options -->
+		<KeyWord name="Options.UnitOfLength" func="yes">
+			<Overload retVal="Sets the unit of length conversion factor.">
+				<Param name="FactorInMeters" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Options.UnitOfSpeed" func="yes">
+			<Overload retVal="Sets the unit of speed conversion factor.">
+				<Param name="FactorInKmph" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Options.BlockLength" func="yes">
+			<Overload retVal="Sets the block length (default 25m).">
+				<Param name="Length" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Options.ObjectVisibility" func="yes">
+			<Overload retVal="Sets object visibility mode (0=Legacy, 1=Track-based, 2=Quad-Tree).">
+				<Param name="Mode (0/1/2)" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Options.SectionBehavior" func="yes">
+			<Overload retVal="0=Default, 1=Simplified section behavior.">
+				<Param name="Mode (0/1)" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Options.CantBehavior" func="yes">
+			<Overload retVal="0=Unsigned, 1=Signed cant behavior.">
+				<Param name="Mode (0/1)" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Options.FogBehavior" func="yes">
+			<Overload retVal="0=Block-based, 1=Interpolated fog behavior.">
+				<Param name="Mode (0/1)" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Options.StartingDirection" func="yes">
+			<Overload retVal="Sets the initial starting direction vector (X, Z).">
+				<Param name="DirectionX" />
+				<Param name="DirectionZ" />
+			</Overload>
+		</KeyWord>
+		<!-- Route -->
+		<KeyWord name="Route.Comment" func="yes">
+			<Overload retVal="Sets the route description/comment.">
+				<Param name="Text" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.Image" func="yes">
+			<Overload retVal="Sets the preview image for the route.">
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.Timetable" func="yes">
+			<Overload retVal="Sets the text for the default timetable.">
+				<Param name="Text" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.Gauge" func="yes">
+			<Overload retVal="Sets the rail gauge in mm (default 1435).">
+				<Param name="ValueInMillimeters" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.RunInterval" func="yes">
+			<Overload retVal="Creates preceding/following AI trains at time intervals (seconds).">
+				<Param name="Interval0" />
+				<Param name="Interval1" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.Elevation" func="yes">
+			<Overload retVal="Sets initial height above sea level in meters.">
+				<Param name="Height" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.Temperature" func="yes">
+			<Overload retVal="Sets initial temperature in Celsius.">
+				<Param name="ValueInCelsius" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.Pressure" func="yes">
+			<Overload retVal="Sets initial air pressure in kPa.">
+				<Param name="ValueInKPa" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.StartTime" func="yes">
+			<Overload retVal="Sets the simulation start time.">
+				<Param name="Time" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.InitialViewpoint" func="yes">
+			<Overload retVal="Initial camera mode (0=Cab, 1=Exterior, 2=Track, 3=Flyby, 4=FlybyZoom).">
+				<Param name="Mode (0-4)" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.AmbientLight" func="yes">
+			<Overload retVal="Sets the ambient light color (0-255).">
+				<Param name="Red" />
+				<Param name="Green" />
+				<Param name="Blue" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.DirectionalLight" func="yes">
+			<Overload retVal="Sets the directional light color (0-255).">
+				<Param name="Red" />
+				<Param name="Green" />
+				<Param name="Blue" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Route.LightDirection" func="yes">
+			<Overload retVal="Sets the light direction angles in degrees.">
+				<Param name="Theta" />
+				<Param name="Phi" />
+			</Overload>
+		</KeyWord>
+		<!-- Train -->
+		<KeyWord name="Train.Folder" func="yes">
+			<Overload retVal="Sets the default train folder.">
+				<Param name="FolderName" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Train.Velocity" func="yes">
+			<Overload retVal="Sets the max speed for preceding AI trains.">
+				<Param name="Speed" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Train.Gauge" func="yes">
+			<Overload retVal="Sets the train rail gauge in mm.">
+				<Param name="ValueInMillimeters" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Train.Interval" func="yes">
+			<Overload retVal="Time interval for preceding trains.">
+				<Param name="Interval0" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Train.Timetable.Day.Load" func="yes">
+			<Overload retVal="Loads daytime timetable image.">
+				<Param name="Index" />
+				<Param name="FileName" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Train.Timetable.Night.Load" func="yes">
+			<Overload retVal="Loads nighttime timetable image.">
+				<Param name="Index" />
+				<Param name="FileName" />
+			</Overload>
+		</KeyWord>
+		<!-- Structure -->
+		<KeyWord name="Structure.Rail.Load" func="yes">
+			<Overload retVal="Loads a rail object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.Ground.Load" func="yes">
+			<Overload retVal="Loads a ground object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.FreeObj.Load" func="yes">
+			<Overload retVal="Loads a free object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.WallL.Load" func="yes">
+			<Overload retVal="Loads a left wall object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.WallR.Load" func="yes">
+			<Overload retVal="Loads a right wall object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.DikeL.Load" func="yes">
+			<Overload retVal="Loads a left dike object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.DikeR.Load" func="yes">
+			<Overload retVal="Loads a right dike object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.FormL.Load" func="yes">
+			<Overload retVal="Loads a left platform edge object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.FormR.Load" func="yes">
+			<Overload retVal="Loads a right platform edge object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.RoofL.Load" func="yes">
+			<Overload retVal="Loads a left roof object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.RoofR.Load" func="yes">
+			<Overload retVal="Loads a right roof object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.CrackL.Load" func="yes">
+			<Overload retVal="Loads a left crack object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.CrackR.Load" func="yes">
+			<Overload retVal="Loads a right crack object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.Beacon.Load" func="yes">
+			<Overload retVal="Loads a beacon object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Structure.Weather.Load" func="yes">
+			<Overload retVal="Loads a weather object.">
+				<Param name="Index" />
+				<Param name="File" />
+			</Overload>
+		</KeyWord>
+		<!-- Track -->
+		<KeyWord name="With Track" func="yes">
+			<Overload retVal="Prefixes subsequent commands starting with a period with 'Track'." />
+		</KeyWord>
+		<KeyWord name="Track.RailStart" func="yes">
+			<Overload retVal="Starts a new rail.">
+				<Param name="Dist" />
+				<Param name="RailIndex" />
+				<Param name="X" />
+				<Param name="Y" />
+				<Param name="RailType" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Rail" func="yes">
+			<Overload retVal="Updates an existing rail.">
+				<Param name="Dist" />
+				<Param name="RailIndex" />
+				<Param name="X" />
+				<Param name="Y" />
+				<Param name="RailType" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.RailType" func="yes">
+			<Overload retVal="Changes the rail type.">
+				<Param name="Dist" />
+				<Param name="RailIndex" />
+				<Param name="Type" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.RailEnd" func="yes">
+			<Overload retVal="Ends the specified rail.">
+				<Param name="Dist" />
+				<Param name="RailIndex" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Curve" func="yes">
+			<Overload retVal="Sets horizontal curve and cant.">
+				<Param name="Dist" />
+				<Param name="Radius" />
+				<Param name="CantInMillimeters" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Pitch" func="yes">
+			<Overload retVal="Sets vertical gradient.">
+				<Param name="Dist" />
+				<Param name="Rate" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.FreeObj" func="yes">
+			<Overload retVal="Places a free object.">
+				<Param name="Dist" />
+				<Param name="RailIndex" />
+				<Param name="FreeObjStructureIndex" />
+				<Param name="X" />
+				<Param name="Y" />
+				<Param name="Yaw" />
+				<Param name="Pitch" />
+				<Param name="Roll" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Wall" func="yes">
+			<Overload retVal="Starts/ends a wall. (Begin: 1=start, 0=end)">
+				<Param name="Dist" />
+				<Param name="RailIndex" />
+				<Param name="WallStructureIndex" />
+				<Param name="Begin" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Dike" func="yes">
+			<Overload retVal="Starts/ends a dike.">
+				<Param name="Dist" />
+				<Param name="RailIndex" />
+				<Param name="DikeStructureIndex" />
+				<Param name="Begin" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Form" func="yes">
+			<Overload retVal="Starts/ends a platform.">
+				<Param name="Dist" />
+				<Param name="RailIndex1" />
+				<Param name="RailIndex2" />
+				<Param name="RoofStructureIndex" />
+				<Param name="FormStructureIndex" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Crack" func="yes">
+			<Overload retVal="Starts/ends a crack.">
+				<Param name="Dist" />
+				<Param name="RailIndex" />
+				<Param name="CrackStructureIndex" />
+				<Param name="Begin" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Ground" func="yes">
+			<Overload retVal="Changes the ground type.">
+				<Param name="Dist" />
+				<Param name="GroundStructureIndex" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Sta" func="yes">
+			<Overload retVal="Defines a station.">
+				<Param name="Dist" />
+				<Param name="Name" />
+				<Param name="ArrivalTime" />
+				<Param name="DepartureTime" />
+				<Param name="PassAlarm" />
+				<Param name="Doors" />
+				<Param name="ForcedRedSignal" />
+				<Param name="System" />
+				<Param name="ArrivalSound" />
+				<Param name="StopDuration" />
+				<Param name="PassengerRatio" />
+				<Param name="DepartureSound" />
+				<Param name="TimetableIndex" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Stop" func="yes">
+			<Overload retVal="Defines a stop position.">
+				<Param name="Dist" />
+				<Param name="Direction" />
+				<Param name="BackwardTolerance" />
+				<Param name="ForwardTolerance" />
+				<Param name="Cars" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Limit" func="yes">
+			<Overload retVal="Sets a speed limit.">
+				<Param name="Dist" />
+				<Param name="Speed" />
+				<Param name="Post" />
+				<Param name="Cource" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.RailLimit" func="yes">
+			<Overload retVal="Sets a speed limit for a specific rail.">
+				<Param name="Dist" />
+				<Param name="RailIndex" />
+				<Param name="Speed" />
+				<Param name="Post" />
+				<Param name="Cource" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Section" func="yes">
+			<Overload retVal="Starts a signalling section.">
+				<Param name="Dist" />
+				<Param name="Aspect0" />
+				<Param name="Aspect1" />
+				<Param name="Aspect2" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Signal" func="yes">
+			<Overload retVal="Places a functional signal.">
+				<Param name="Dist" />
+				<Param name="Aspects" />
+				<Param name="Unused" />
+				<Param name="X" />
+				<Param name="Y" />
+				<Param name="Yaw" />
+				<Param name="Pitch" />
+				<Param name="Roll" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.SigF" func="yes">
+			<Overload retVal="Places a visual signal.">
+				<Param name="Dist" />
+				<Param name="SignalIndex" />
+				<Param name="Section" />
+				<Param name="X" />
+				<Param name="Y" />
+				<Param name="Yaw" />
+				<Param name="Pitch" />
+				<Param name="Roll" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Relay" func="yes">
+			<Overload retVal="Places a repeating signal.">
+				<Param name="Dist" />
+				<Param name="X" />
+				<Param name="Y" />
+				<Param name="Yaw" />
+				<Param name="Pitch" />
+				<Param name="Roll" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Beacon" func="yes">
+			<Overload retVal="Places a beacon.">
+				<Param name="Dist" />
+				<Param name="Type" />
+				<Param name="BeaconStructureIndex" />
+				<Param name="Section" />
+				<Param name="Data" />
+				<Param name="X" />
+				<Param name="Y" />
+				<Param name="Yaw" />
+				<Param name="Pitch" />
+				<Param name="Roll" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Transponder" func="yes">
+			<Overload retVal="Places an ATS-SN/P transponder.">
+				<Param name="Dist" />
+				<Param name="Type" />
+				<Param name="Signal" />
+				<Param name="SwitchSystem" />
+				<Param name="X" />
+				<Param name="Y" />
+				<Param name="Yaw" />
+				<Param name="Pitch" />
+				<Param name="Roll" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Pattern" func="yes">
+			<Overload retVal="ATS-P speed restriction (0=temp, 1=perm).">
+				<Param name="Dist" />
+				<Param name="Type" />
+				<Param name="Speed" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Fog" func="yes">
+			<Overload retVal="Sets fog conditions.">
+				<Param name="Dist" />
+				<Param name="StartingDistance" />
+				<Param name="EndingDistance" />
+				<Param name="Red" />
+				<Param name="Green" />
+				<Param name="Blue" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Brightness" func="yes">
+			<Overload retVal="Sets track brightness (0-255).">
+				<Param name="Dist" />
+				<Param name="Value" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Back" func="yes">
+			<Overload retVal="Changes the background image.">
+				<Param name="Dist" />
+				<Param name="BackgroundTextureIndex" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Marker" func="yes">
+			<Overload retVal="Shows a marker image.">
+				<Param name="Dist" />
+				<Param name="FileName" />
+				<Param name="Distance" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.TextMarker" func="yes">
+			<Overload retVal="Shows a text marker.">
+				<Param name="Dist" />
+				<Param name="Text" />
+				<Param name="Distance" />
+				<Param name="FontColor" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.PointOfInterest" func="yes">
+			<Overload retVal="Creates a camera point of interest.">
+				<Param name="Dist" />
+				<Param name="RailIndex" />
+				<Param name="X" />
+				<Param name="Y" />
+				<Param name="Yaw" />
+				<Param name="Pitch" />
+				<Param name="Roll" />
+				<Param name="Text" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Announce" func="yes">
+			<Overload retVal="Plays a sound in the cab.">
+				<Param name="Dist" />
+				<Param name="FileName" />
+				<Param name="Speed" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.AnnounceAll" func="yes">
+			<Overload retVal="Plays a sound in all cars.">
+				<Param name="Dist" />
+				<Param name="FileName" />
+				<Param name="Speed" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Doppler" func="yes">
+			<Overload retVal="Places an environmental looping sound.">
+				<Param name="Dist" />
+				<Param name="FileName" />
+				<Param name="X" />
+				<Param name="Y" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.Buffer" func="yes">
+			<Overload retVal="Places a bumper on Rail 0." />
+		</KeyWord>
+		<KeyWord name="Track.RailBuffer" func="yes">
+			<Overload retVal="Places a bumper on a specific rail.">
+				<Param name="Dist" />
+				<Param name="RailIndex" />
+				<Param name="AffectsAI" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.AmbientLight" func="yes">
+			<Overload retVal="Changes ambient light from this point.">
+				<Param name="Dist" />
+				<Param name="Red" />
+				<Param name="Green" />
+				<Param name="Blue" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.DirectionalLight" func="yes">
+			<Overload retVal="Changes directional light from this point.">
+				<Param name="Dist" />
+				<Param name="Red" />
+				<Param name="Green" />
+				<Param name="Blue" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Track.LightDirection" func="yes">
+			<Overload retVal="Changes light direction from this point.">
+				<Param name="Dist" />
+				<Param name="Theta" />
+				<Param name="Phi" />
+			</Overload>
+		</KeyWord>
+	</AutoComplete>
+</NotepadPlus>

@@ -29,6 +29,10 @@ List of available prefixes for the Animated object format (`.animated`).
 | `ryda` | `RotateYDamping` | Damping for Y-rotation. |
 | `rzda` | `RotateZDamping` | Damping for Z-rotation. |
 | `rda` | `RotateDampingXYZ` | Inserts all RotateDamping commands at once. |
+| `sxf` | `ScaleXFunction` | Scales object on X-axis based on Formula. |
+| `syf` | `ScaleYFunction` | Scales object on Y-axis based on Formula. |
+| `szf` | `ScaleZFunction` | Scales object on Z-axis based on Formula. |
+| `scf` | `ScaleFunctionXYZ` | Inserts all ScaleFunction commands at once. |
 | `tsxd` | `TextureShiftXDirection` | Texture shift direction X. |
 | `tsyd` | `TextureShiftYDirection` | Texture shift direction Y. |
 | `tsxf` | `TextureShiftXFunction` | Texture shift function X. |

@@ -17,10 +17,10 @@ List of available prefixes for the CSV object format (`.csv`).
 | `tll` | `TranslateAll` | Translates all vertices in object. |
 | `sc` | `Scale` | Scales current section vertices. |
 | `scc` | `ScaleAll` | Scales all vertices in object. |
-| `rt` | `Rotate` | Rotates current section vertices. |
-| `rtt` | `RotateAll` | Rotates all vertices in object. |
-| `mr` | `Mirror` | Mirrors current section vertices. |
-| `mrr` | `MirrorAll` | Mirrors all vertices in object. |
+| `rt` | `Rotate` | Rotates current section vertices around axis (X,Y,Z) by Angle degrees. |
+| `rtt` | `RotateAll` | Rotates all vertices in object around axis (X,Y,Z) by Angle degrees. |
+| `mr` | `Mirror` | Mirrors current section vertices (1=true, 0=false for X,Y,Z). |
+| `mrr` | `MirrorAll` | Mirrors all vertices in object (1=true, 0=false for X,Y,Z). |
 | `sh` | `Shear` | Shear mapping for current section. |
 | `shh` | `ShearAll` | Shear mapping for all vertices. |
 | `scr` | `SetColor` | Sets vertex color (0-255). |

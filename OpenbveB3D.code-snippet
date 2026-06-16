@@ -6,7 +6,7 @@
   },
   "Vertex": {
     "prefix": "vex",
-    "body": "Vertex, ${1:vX}, ${2:vY}, ${3:vZ}, ${4:nX}, ${5:nY}, ${6:nZ} $0",
+    "body": "Vertex, ${1:vX}, ${2:vY}, ${3:vZ}, ${4:nX}, ${5:nY}, ${6:nZ}$0",
     "description": "Create a vertex with spatial (v) and normal (n) coordinates."
   },
   "Vertex4x": {
@@ -81,37 +81,37 @@
   },
   "Rotate": {
     "prefix": "rt",
-    "body": "Rotate, ${1:X}, ${2:Y}, ${3:Z}$0",
-    "description": "Rotate vertices created so far in current section."
+    "body": "Rotate, ${1:X}, ${2:Y}, ${3:Z}, ${4:Angle}$0",
+    "description": "Rotate vertices created so far in current section around axis (X,Y,Z) by Angle degrees."
   },
   "RotateAll": {
     "prefix": "rtt",
-    "body": "RotateAll, ${1:X}, ${2:Y}, ${3:Z}$0",
-    "description": "Rotate all vertices in the file."
+    "body": "RotateAll, ${1:X}, ${2:Y}, ${3:Z}, ${4:Angle}$0",
+    "description": "Rotate all vertices in the file around axis (X,Y,Z) by Angle degrees."
   },
   "Mirror": {
     "prefix": "mr",
-    "body": "Mirror, ${1:X}, ${2:Y}, ${3:Z}$0",
-    "description": "Mirror vertices created so far in current section."
+    "body": "Mirror, ${1|0,1|}, ${2|0,1|}, ${3|0,1|}$0",
+    "description": "Mirror vertices created so far in current section (1=true, 0=false for X,Y,Z)."
   },
   "MirrorAll": {
     "prefix": "mrr",
-    "body": "MirrorAll, ${1:X}, ${2:Y}, ${3:Z}$0",
-    "description": "Mirror all vertices in the file."
+    "body": "MirrorAll, ${1|0,1|}, ${2|0,1|}, ${3|0,1|}$0",
+    "description": "Mirror all vertices in the file (1=true, 0=false for X,Y,Z)."
   },
   "Shear": {
     "prefix": "sh",
-    "body": "Shear, ${1:dX}, ${2:dY}, ${3:dZ}, ${4:sX}, ${5:sY}, ${6:sZ}, ${7:r}$0",
+    "body": "Shear, ${1:dX}, ${2:dY}, ${3:dZ}, ${4:sX}, ${5:sY}, ${6:sZ}, ${7:Ratio}$0",
     "description": "Perform shear mapping on current section vertices."
   },
   "ShearAll": {
     "prefix": "shh",
-    "body": "ShearAll, ${1:X}, ${2:Y}, ${3:Z}$0",
+    "body": "ShearAll, ${1:dX}, ${2:dY}, ${3:dZ}, ${4:sX}, ${5:sY}, ${6:sZ}, ${7:Ratio}$0",
     "description": "Shear all vertices in the file."
   },
   "Color": {
     "prefix": "col",
-    "body": "SetColor, ${1:Red}, ${2:Green}, ${3:Blue}, ${4:Alpha}$0",
+    "body": "Color, ${1:Red}, ${2:Green}, ${3:Blue}, ${4:Alpha}$0",
     "description": "Set color for faces in current section (0-255)."
   },
   "ColorAll": {
@@ -131,12 +131,12 @@
   },
   "BlendMode": {
     "prefix": "bm",
-    "body": "BlendMode, ${1|Normal,Additive|}, ${2:GlowHalfDistance}, ${3:|DivideExponent2,DivideExponent4|}$0",
+    "body": "BlendMode, ${1|Normal,Additive|}, ${2:GlowHalfDistance}, ${3|DivideExponent2,DivideExponent4|}$0",
     "description": "Set blend mode and glow attenuation."
   },
   "WrapMode": {
     "prefix": "wm",
-    "body": "WrapMode, ${1|Repeat,Clamp|}$0",
+    "body": "WrapMode, ${1|ClampClamp,ClampRepeat,RepeatClamp,RepeatRepeat|}$0",
     "description": "Texture tiling behavior."
   },
   "Load": {
@@ -148,6 +148,11 @@
     "prefix": "tra",
     "body": "Transparent, ${1:Red}, ${2:Green}, ${3:Blue}$0",
     "description": "Screendoor transparency color key."
+  },
+  "Crossfading": {
+    "prefix": "crf",
+    "body": "Crossfading, ${1|true,false|}$0",
+    "description": "Controls blending between daytime and nighttime textures."
   },
   "Coordinates": {
     "prefix": "coo",
